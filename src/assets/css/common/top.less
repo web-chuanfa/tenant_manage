@@ -1,0 +1,193 @@
+.header {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index:1000;
+  font-size: 18px;
+  width: 100%;
+  height: 60px;
+  line-height: 60px;
+  color: #fff;
+}
+.logo { float: left; margin-left: 120px;font-size: 18px; font-size: 20px;}
+.login-box{
+  display: flex; float: right;
+  .logined{
+    padding-left: 40px;
+    width: 80px;
+    cursor: pointer;
+    .signOut{
+      background-color: #ffffff;
+      color: rgba(0,0,0,.65);
+      border-radius: 4px;
+      box-shadow: 0 2px 8px rgba(3,48,76,.15);
+      background-clip: padding-box;
+      position: relative;
+      height: 40px;
+      line-height: 40px;
+      padding: 0 10px;
+      right: 10px;
+      z-index: 1050;
+      font-size: 14px;
+      img{
+        width: 16px;
+        margin-top: 3px;
+        position: relative;
+        top: 3px;
+        margin-right: 5px;
+      }
+    }
+    .active{
+      color: #ffffff;
+    }
+  }
+  .btn{
+    cursor: pointer;
+  }
+}
+.support-box{
+  margin-left: 20px;
+  div{
+    width: 111px;
+    text-align: center;
+  }
+  &.active{
+    background-color: rgba(51, 51, 51, 1);
+    cursor: pointer;
+  }
+  ul{
+    padding-bottom: 10px;
+    text-align: center;
+    background-color: rgba(51, 51, 51, 1);
+    li{
+      height: 32px;
+      line-height: 33px;
+      a{
+        height: 32px;
+        line-height: 32px;
+        padding: 0 12px;
+        font-size: 14px;
+        color: #ffffff;
+      }
+      a:hover{
+        color: #ff0000;
+      }
+    }
+  }
+}
+.keyTab{
+  div{
+    width: 130px;
+    text-align: center;
+  }
+  &.active{
+    background-color: rgba(51, 51, 51, 1);
+    cursor: pointer;
+  }
+  ul{
+    padding-bottom: 10px;
+    text-align: center;
+    background-color: rgba(51, 51, 51, 1);
+    li{
+      height: 32px;
+      line-height: 33px;
+      a{
+        height: 32px;
+        line-height: 32px;
+        padding: 0 12px;
+        font-size: 14px;
+        color: #ffffff;
+      }
+      a:hover{
+        color: #ff0000;
+      }
+    }
+  }
+}
+/*keytab弹出框*/
+.downloadUser{
+  width: 427px;
+  height: 182px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  position: fixed;
+  z-index: 1003;
+  top: 20%;
+  left: 50%;
+  margin-left: -213px;
+  .content{
+    padding: 0 30px;
+    color: #333333;
+    margin-top: 40px;
+    line-height: 30px;
+    .el-icon-question{
+      color: #f3af1cba;
+      font-size: 25px;
+      position: relative;
+      top:3px;
+      margin-right: 5px;
+    }
+  }
+  .footer{
+    text-align: right;
+    padding-right: 40px;
+    .marginRight10{
+      margin-right: 10px;
+    }
+    &.marginTop30{
+      margin-top: 30px;
+    }
+  }
+}
+.downloadProject{
+  width: 500px;
+  height: 250px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  position: fixed;
+  z-index: 1003;
+  top: 20%;
+  left: 50%;
+  margin-left: -250px;
+  .dheader{
+    color: #f92f2f;
+    padding-left: 20px;
+  }
+  .content{
+    padding: 0 20px;
+    width: 450px;
+    margin: 0 auto;
+    color: #333333;
+    line-height: 30px;
+    .w160{
+      width: 160px;
+      /*float: left;*/
+    }
+  }
+  .footer{
+    text-align: right;
+    padding-right: 40px;
+    .marginRight10{
+      margin-right: 10px;
+    }
+    &.marginTop30{
+      margin-top: 30px;
+    }
+    &.marginTop10{
+      margin-top: 10px;
+    }
+  }
+}
+.updateProject{
+  height: 200px;
+}
+.mask{
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background-color: #000;
+  opacity: 0.5;
+  z-index: 1001;
+}

@@ -1,0 +1,60 @@
+{"code": 0,
+  "error": null,
+  "data": {
+    "resultOrgEntity": [
+      {
+        "orgName": "中信云测试大数据应用",
+        "id": "1",
+        "resultGrpEntity": [
+          {
+            "grpName": "你好",
+            "id": "3",
+            "resultServTypeEntity": [
+              {
+                "servType": "HDFS",
+                "id": "5",
+                "resultDatabaseEntity": [
+                  {
+                    "insId": "73ed686d-805b-4e91-9651-54ef4a7bc653",
+                    "id": "7",
+                    "actUseSize": "5",
+                    "PersentAge": "20%",
+                    "RemainUsage": "6",
+                    "Value": "0"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "orgName": "中信云测试大数据应用1",
+        "id": "2",
+        "resultGrpEntity": [
+          {
+            "grpName": "你好1",
+            "id": "4",
+            "resultServTypeEntity": [
+              {
+                "servType": "HDFS1",
+                "id": "6",
+                "resultDatabaseEntity": [
+                  {
+                    "insId": "73ed686d-805b-4e91-9651-54ef4a7bc6531",
+                    "id": "8",
+                    "actUseSize": "51",
+                    "PersentAge": "25%",
+                    "RemainUsage": "56",
+                    "Value": "3"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
+

@@ -1,0 +1,37 @@
+{
+  "code": 0,
+  "error": null,
+  "data": {
+    "tableData": [
+      {
+        "username": "wangbg",
+        "name": "王保国",
+        "created": "xiesj",
+        "email": "wangbg@citic.com",
+        "updateDate": "2018-10-24 12:01:15",
+        "operate": "添加"
+      }, {
+        "username": "zhaonina",
+        "name": "赵妮娜",
+        "created": "system",
+        "email": "zhaonn@citic.com",
+        "updateDate": "2018-10-24 12:01:15",
+        "operate": "添加"
+      }, {
+        "username": "xiesj",
+        "name": "谢世局",
+        "created": "system",
+        "email": "xiesj@citic.com",
+        "updateDate": "2018-10-24 12:01:15",
+        "operate": "添加"
+      }, {
+        "username": "wangcy",
+        "name": "王彩云",
+        "created": "wangbg",
+        "email": "wangcy@citic.com",
+        "updateDate": "2018-10-24 12:01:15",
+        "operate": "添加"
+      }
+    ]
+  }
+}

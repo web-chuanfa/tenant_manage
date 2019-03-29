@@ -1,0 +1,53 @@
+{ "code": 0,
+  "error": null,
+  "data": {
+    "insinfo": [
+      {
+        "dfid":"26b55ebb-8355-11e8-8fe2-00163e0007e4",
+        "insid": "2b47fd9d-46b0-43bb-bfc0-f4fc49c5f422",
+        "grp_id": "13b40460-ad9d-4d02-adb6-828a3beb5595",
+        "grp_name": "测试租户12",
+        "insname": "Hive_201807091650_37cb9484-cae5-4f02-985a-577d6a8cb92a",
+        "param":{
+          "PayType": "Postpaid",
+          "storageSpaceQuota": "32",
+          "yarnQueueQuota": "16"
+        },
+        "servname": "Hive",
+        "createDate": "2017-03-19 18:20:09",
+        "expireDate": "2019-03-20 14:20:09"
+      },
+      {
+        "dfid":"26b55ebb-8355-11e8-8fe2-00163e0007e4",
+        "insid": "8b19b0d2-82ec-4b04-a323-7101abdf32e2",
+        "grp_id": "8bc621e6-7f70-445e-b9d8-40fd8a805eaf",
+        "grp_name": "测试租户3",
+        "insname": "HDFS_201808241756_60ebf977-0c5e-4c07-8c71-1bd2ff10d126",
+        "param":{
+          "PayType": "Postpaid",
+          "storageSpaceQuota": "1",
+          "yarnQueueQuota": "1"
+        },
+        "servname": "HDFS",
+        "createDate": "2017-07-19 14:20:09",
+        "expireDate": "2019-08-20 14:30:12"
+      },
+      {
+        "dfid":"26b55ebb-8355-11e8-8fe2-00163e0007e4",
+        "insid": "a2f3a805-a893-47b5-9481-8cc3fe7de44c",
+        "grp_id": "69d6ff63-3562-4377-b07c-2d1a939b6fca",
+        "grp_name": "测试租户应用基线",
+        "insname": "Greenplum_201807091513_d08c678e-c0b5-4b58-9a1c-f8acda623379",
+        "param":{
+          "PayType": "Postpaid",
+          "storageSpaceQuota": "64",
+          "yarnQueueQuota": "0"
+        },
+        "servname": "Greenplum",
+        "createDate": "2017-08-19 14:20:09",
+        "expireDate": "2019-02-20 14:40:29"
+      }
+    ]
+  }
+}
+

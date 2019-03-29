@@ -1,0 +1,88 @@
+.custom-tree-node {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 14px;
+  padding-right: 8px;
+}
+.overview-container {
+  width: 100%;
+  background-color: #ffffff;
+  .filter-container{
+    min-height: 50px;
+    clear: both;
+  }
+  .tenant-serve-list{
+    clear: both;
+    .el-form-item {
+      margin-bottom: 10px;
+    }
+    .el-row {
+      margin-bottom: 20px;
+      height: 80px;
+      background-color: #f7f7f7;
+      padding: 15px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+      &:hover{
+        -webkit-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.349019607843137);
+        box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.349019607843137);
+      }
+    }
+    .el-col {
+      border-radius: 4px;
+      .hive,.instance{
+        span{
+          color: #736b6b;
+          font-size: 14px;
+        }
+      }
+      .permissionOperation{
+        span{
+          color: #1bb0e1;
+          cursor: pointer;
+        }
+      }
+      .hive{
+        margin-top: 8px;
+        .marginRight10{
+          margin-right: 10px;
+        }
+      }
+      .detail{
+        margin-top: 15px;
+        b{
+          color: #009aff;
+        }
+      }
+      .idleness{
+        position: relative;
+        top:10px;
+        span{
+          position: relative;
+          top: -50px;
+          left: 45px;
+          font-size: 13px;
+          color: rgb(125, 127, 128);
+          font-weight: bold;
+        }
+      }
+      .el-progress-circle,.el-progress,.el-progress-circle{
+        .el-progress__text{
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}
+.marginTop8{
+  margin-top: 8px;
+}
+.marginTop15{
+  margin-top: 15px;
+}
+.marginRight20{
+  margin-right: 20px;
+}

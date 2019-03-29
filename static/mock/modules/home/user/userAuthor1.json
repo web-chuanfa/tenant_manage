@@ -1,0 +1,88 @@
+{
+  "code": 0,
+  "error": null,
+  "data": {
+    "userAuthor": [
+      {
+        "id": 1,
+        "label": "所有租户",
+        "children": [
+          {
+            "id": 4,
+            "label": "中信云测试大数据应用",
+            "roleList": [
+              {
+                "roleName": "租户管理员",
+                "tenantId": 0
+              }
+            ],
+            "children": [{
+              "id": 9,
+              "label": "测试应用基线1",
+              "roleList": [
+                {
+                  "roleName": "项目管理员",
+                  "tenantId": 1
+                },
+                {
+                  "roleName": "项目成员",
+                  "tenantId": 2
+                }
+              ]
+            }, {
+              "id": 10,
+              "label": "测试租户应用基线2",
+              "roleList": [
+                {
+                  "roleName": "项目管理员",
+                  "tenantId": 3
+                },
+                {
+                  "roleName": "项目成员",
+                  "tenantId": 4
+                }
+              ]
+            }]
+          },
+          {
+            "id": 10,
+            "label": "中信云测试大数据应用",
+            "roleList": [
+              {
+                "roleName": "租户管理员",
+                "tenantId": 30
+              }
+            ],
+            "children": [{
+              "id": 9,
+              "label": "测试应用基线1",
+              "roleList": [
+                {
+                  "roleName": "项目管理员",
+                  "tenantId": 21
+                },
+                {
+                  "roleName": "项目成员",
+                  "tenantId": 22
+                }
+              ]
+            }, {
+              "id": 10,
+              "label": "测试租户应用基线2",
+              "roleList": [
+                {
+                  "roleName": "项目管理员",
+                  "tenantId": 23
+                },
+                {
+                  "roleName": "项目成员",
+                  "tenantId": 24
+                }
+              ]
+            }]
+          }
+        ]
+      }
+    ]
+  }
+}

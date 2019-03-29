@@ -1,0 +1,29 @@
+body { font-size: 14px;}
+.side-menu { position: fixed; top: 60px; bottom: 0; left: 0; background-color: #272a33;z-index: 12;}
+.menu {width: 160px;height: 100% ; float: left; overflow-y: none;}
+.menu-item { width: 158px; font-size: 14px; line-height: 20px;padding: 8px 0; color: #ffffff; position: relative; text-align: center; line-height: 2; cursor: pointer;border-left: #2d2d2d 2px solid !important; }
+.menu-item .sub-menu {display: none;position:absolute;left:158px;top:0;z-index: 9999;color:#ffffff;}
+.menu-item.active {color: #e8e7ac;background-color: #000;border-left: #e8e7ac 2px solid !important;}
+.menu-item:hover {color: #e8e7ac;background-color: #000;border-left: #e8e7ac 2px solid !important;}
+.menu-item:hover .sub-menu {display: block;}
+/*.menu-item.active::before{*/
+/*content: ""; position: absolute; left: 5px; top: 12px; height:20px; width: 4px; border-radius: 2px; background-color: #1d2027;*/
+/*}*/
+/*.menu-item.active::after{*/
+/*content: ""; position: absolute; right: 0; top: 12px; height: 0; width: 0; border: 10px solid transparent; border-right-color:#eee;*/
+/*}*/
+.sub-menu{ height: 100% ;float: left; width: 120px;}
+.el-menu {height: auto;background-color: #303030;}
+.el-menu-item{
+  color: #ffffff;
+  border-left: #303030 2px solid !important;
+}
+.el-menu-item:hover{
+  background-color: #000;
+  border-left: #e8e7ac 2px solid !important;
+}
+.el-menu-item.is-active{
+  color: #e8e7ac !important;
+  background-color: #000;
+  border-left: #e8e7ac 2px solid !important;
+}

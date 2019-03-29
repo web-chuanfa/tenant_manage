@@ -1,0 +1,10 @@
+{
+    "success":1,
+    "error":null,
+    "data":{
+        "id":1,
+        "topicId":"59",
+        "isShow":1,
+        "switchTime":3
+    }
+}

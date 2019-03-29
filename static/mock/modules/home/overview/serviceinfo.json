@@ -1,0 +1,22 @@
+{
+  "code": 0,
+  "error": null,
+  "data": {
+    "serviceinfo": [
+      {
+        "tit": "数据开发",
+        "storageResource": [
+          {
+            "servname": "Hive",
+            "url": "9"
+          },
+          {
+            "servname": "HDFS",
+            "count": "1",
+            "insid":"c879e866-2463-4500-9645-b393e4cae9ec"
+          }
+        ]
+      }
+    ]
+  }
+}

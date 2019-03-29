@@ -1,0 +1,2 @@
+webpackJsonp([6],{RJgG:function(e,n,t){"use strict";Object.defineProperty(n,"__esModule",{value:!0});var l={name:"userInfo",created:function(){console.log(this)}},s={render:function(){var e=this.$createElement;return(this._self._c||e)("el-card",{staticClass:"box-card"},[this._v("\n  hellow\n")])},staticRenderFns:[]},r=t("VU/8")(l,s,!1,null,null,null);n.default=r.exports}});
+//# sourceMappingURL=6.c50b27a81e4002cfdd3d.js.map

@@ -1,0 +1,83 @@
+{
+  "code": 0,
+  "error": null,
+  "data": {
+    "insinfo": [
+      {
+        "tit": "存储资源",
+        "storageResource": [
+          {
+            "servname": "Hive",
+            "count": "9",
+            "insid":"dd16c43f-740f-4079-8ef5-efdfcb57e350"
+          },
+          {
+            "servname": "HDFS",
+            "count": "1",
+            "insid":"c879e866-2463-4500-9645-b393e4cae9ec"
+          },
+          {
+            "servname": "Greenplum",
+            "count": "2",
+            "insid":"dd16c43f-740f-4079-8ef5-efdfcb57e350"
+          },
+          {
+            "servname": "HBase",
+            "count": "3",
+            "insid":"c879e866-2463-4500-9645-b393e4cae9ec"
+          }
+        ]
+      },
+      {
+        "tit": "计算资源",
+        "storageResource": [
+          {
+            "servname": "HBase",
+            "count": "1",
+            "insid":"dd16c43f-740f-4079-8ef5-efdfcb57e350"
+          },
+          {
+            "servname": "HDFS",
+            "count": "7",
+            "insid":"c879e866-2463-4500-9645-b393e4cae9ec"
+          },
+          {
+            "servname": "Greenplum",
+            "count": "2",
+            "insid":"dd16c43f-740f-4079-8ef5-efdfcb57e350"
+          },
+          {
+            "servname": "Hive",
+            "count": "5",
+            "insid":"c879e866-2463-4500-9645-b393e4cae9ec"
+          }
+        ]
+      },
+      {
+        "tit": "消息队列",
+        "storageResource": [
+          {
+            "servname": "Greenplum",
+            "count": "0",
+            "insid":"dd16c43f-740f-4079-8ef5-efdfcb57e350"
+          },
+          {
+            "servname": "HDFS",
+            "count": "4",
+            "insid":"c879e866-2463-4500-9645-b393e4cae9ec"
+          },
+          {
+            "servname": "Hive",
+            "count": "2",
+            "insid":"dd16c43f-740f-4079-8ef5-efdfcb57e350"
+          },
+          {
+            "servname": "HBase",
+            "count": "5",
+            "insid":"c879e866-2463-4500-9645-b393e4cae9ec"
+          }
+        ]
+      }
+    ]
+  }
+}
