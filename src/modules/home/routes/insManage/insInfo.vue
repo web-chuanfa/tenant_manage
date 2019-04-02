@@ -99,20 +99,11 @@
               <div class="well well-log" style="margin: 0;width: 100%;padding-left:0;padding-right:0;">
                 <div style="color: #fff;padding:0 15px;overflow: auto;">
                   <div style="padding:2px 0px;word-break:break-all;word-wrap:break-word;">
-                    Greenplum_URI&nbsp;:&nbsp;Failure OR Not Begin
+                    qq&nbsp;:&nbsp;23wwq
                   </div>
                 </div>
                 <div style="color: #fff;padding:0 15px;overflow: auto;">
-                  <div style="padding:2px 0px;word-break:break-all;word-wrap:break-word;">hosts&nbsp;:&nbsp;HDFS_201808241756_60ebf977-0c5e-4c07-8c71</div>
-                </div>
-                <div style="color: #fff;padding:0 15px;overflow: auto;">
-                  <div style="padding:2px 0px;word-break:break-all;word-wrap:break-word;">port&nbsp;:&nbsp;8089</div>
-                </div>
-                <div style="color: #fff;padding:0 15px;overflow: auto;">
-                  <div style="padding:2px 0px;word-break:break-all;word-wrap:break-word;">top&nbsp;:&nbsp;HBase_201810101504_775150ae</div>
-                </div>
-                <div style="color: #fff;padding:0 15px;overflow: auto;">
-                  <div style="padding:2px 0px;word-break:break-all;word-wrap:break-word;">status&nbsp;:&nbsp;Bound</div>
+                  <div style="padding:2px 0px;word-break:break-all;word-wrap:break-word;">111&nbsp;:&nbsp;2wsdw</div>
                 </div>
               </div>
             </div>
@@ -357,14 +348,14 @@
       getTitleHref(val){
         let str = val.toLowerCase(),
           links={
-          "hive":"https://help.c.citic/hc/kb/article/1162414/",
-          "hdfs":"https://help.c.citic/hc/kb/article/1162348/",
-          "kafka":"https://help.c.citic/hc/kb/article/1162417/",
-          "spark":"https://help.c.citic/hc/kb/article/1162415/",
-          "hbase":"https://help.c.citic/hc/kb/article/1162279/",
-          "mapreduce":"https://help.c.citic/hc/kb/section/1059511/",
-          "greenplum":"https://help.c.citic/hc/kb/section/1059511/",
-        },link="https://help.c.citic/hc/kb/section/1059511/";
+            "hive":"https://help.c.citic/hc/kb/article/1162414/",
+            "hdfs":"https://help.c.citic/hc/kb/article/1162348/",
+            "kafka":"https://help.c.citic/hc/kb/article/1162417/",
+            "spark":"https://help.c.citic/hc/kb/article/1162415/",
+            "hbase":"https://help.c.citic/hc/kb/article/1162279/",
+            "mapreduce":"https://help.c.citic/hc/kb/section/1059511/",
+            "greenplum":"https://help.c.citic/hc/kb/section/1059511/",
+          },link="https://help.c.citic/hc/kb/section/1059511/";
         if(links[str]){
           link=links[str];
         }

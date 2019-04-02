@@ -32,7 +32,7 @@
         :data="tableData.slice((currentPage-1)*pageSize,currentPage*pageSize)"
         style="width: 100%">
         <el-table-column
-          prop="name"
+          prop="uname"
           label="用户"
           width="180">
         </el-table-column>
@@ -43,10 +43,6 @@
         </el-table-column>
         <el-table-column
           prop="date"
-          label="操作日期">
-        </el-table-column>
-        <el-table-column
-          prop="timer"
           label="操作时间">
         </el-table-column>
         <el-table-column
@@ -54,7 +50,7 @@
           label="源IP">
         </el-table-column>
         <el-table-column
-          prop="des"
+          prop="content"
           label="操作描述">
         </el-table-column>
       </el-table>
@@ -312,7 +308,7 @@
     created (){
       // 审计日志列表
       this.$service.home.auditLog.getLogList().then(res => {
-        this.tableData = res.list;
+        this.tableData = res.auditInfos.info;
       });
     },
     methods: {

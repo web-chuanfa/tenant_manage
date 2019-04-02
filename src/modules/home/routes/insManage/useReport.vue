@@ -3,23 +3,23 @@
     <div class="filter-container" style="margin-bottom: 5px;">
       <el-form :inline="true" class="demo-form-inline">
         <el-form-item label="租户">
-          <el-select placeholder="全部" v-model="tenant.orgId" @change="tenantChange(tenant.orgId)">
-            <el-option v-for="(item,index) in tenant" :value="item.orgId" :label="item.orgName"></el-option>
+          <el-select placeholder="全部" v-model="Tenant.orgId" @change="tenantChange(Tenant.orgId)">
+            <el-option v-for="(item,index) in Tenant" :value="item.orgId" :label="item.orgName" :key="index"></el-option>
           </el-select>
         </el-form-item>
         <el-form-item label="项目">
           <el-select placeholder="全部" v-model="project.grpId" @change="grpChange(project.grpId)">
-            <el-option v-for="(item,index) in project" :value="item.grpId" :label="item.grpName"></el-option>
+            <el-option v-for="(item,index) in project" :value="item.grpId" :label="item.grpName" :key="index"></el-option>
           </el-select>
         </el-form-item>
         <el-form-item label="类型">
-          <el-select placeholder="全部" v-model="types.servId" @change="insChange(types.servId)">
-            <el-option v-for="(item,index) in types" :value="item.servId" :label="item.servType"></el-option>
+          <el-select placeholder="全部" v-model="Types.servId" @change="insChange(Types.servId)">
+            <el-option v-for="(item,index) in Types" :value="item.servId" :label="item.servType" :key="index"></el-option>
           </el-select>
         </el-form-item>
         <el-form-item label="实例ID">
           <el-select placeholder="全部" v-model="instance.insId">
-            <el-option v-for="(item,index) in instance" :value="item.insId" :label="item.insId"></el-option>
+            <el-option v-for="(item,index) in instance" :value="item.insId" :label="item.insId" :key="index"></el-option>
           </el-select>
         </el-form-item>
       </el-form>
@@ -31,7 +31,7 @@
       <div class="tenant-serve-item" v-for="(item,index) in serverList">
         <el-row :gutter="20">
           <el-col :span="2">
-            <img src="../../../../assets/images/serviceimg/hive.png" alt="" height="50">
+            <img :src="require('../../../../assets/images/serviceimg/'+item.servName.toLowerCase()+'.png')" alt="" height="50">
           </el-col>
           <el-col :span="9">
             <div class="instance marginTop15">
@@ -61,7 +61,7 @@
       <el-pagination
         @size-change="handleSizeChange"
         @current-change="handleCurrentChange"
-        :current-page="currentPage4"
+        :current-page="currentPage"
         :page-sizes="[10, 20, 30, 40]"
         :page-size="100"
         align="right"
@@ -76,17 +76,14 @@
   export default {
     data() {
       return {
-        tenant: [],
+        Tenant: [],
         project: [],
-        types: [],
+        Types: [],
         instance: [],
         serverList: [],
         radius: 6,
         circleWidth: 45,
-        currentPage1: 5,
-        currentPage2: 5,
-        currentPage3: 5,
-        currentPage4: 4
+        currentPage: 4
       }
     },
     methods: {
@@ -98,7 +95,7 @@
       },
       tenantChange (idx){
         let obj = {};
-        obj = this.tenant.find((item) => { //这里的tenant就是上面遍历的数据源
+        obj = this.Tenant.find((item) => { //这里的tenant就是上面遍历的数据源
           return item.orgId === idx; //筛选出匹配数据
         });
         this.project = obj.resultGrpEntityList;
@@ -109,16 +106,16 @@
         proObj = this.project.find((item) => { //这里的tenant就是上面遍历的数据源
           return item.grpId === proId; //筛选出匹配数据
         });
-        this.types = proObj.resultServTypeEntityList;
+        this.Types = proObj.resultServTypeEntityList;
         // console.log(proObj);
       },
       insChange (insId){
         let insObj = {};
-        insObj = this.types.find((item) => { //这里的tenant就是上面遍历的数据源
+        insObj = this.Types.find((item) => { //这里的tenant就是上面遍历的数据源
           return item.servId === insId; //筛选出匹配数据
         });
         this.instance = insObj.resultInsEntityList;
-        console.log(insObj);
+        // console.log(insObj);
       },
       handleSizeChange(val) {
         console.log(`每页 ${val} 条`);

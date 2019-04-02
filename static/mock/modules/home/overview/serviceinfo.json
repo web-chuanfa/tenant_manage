@@ -1,21 +1,37 @@
 {
-  "code": 0,
+  "errcode": 0,
   "error": null,
   "data": {
-    "serviceinfo": [
+    "serverTypeInfo":[
       {
-        "tit": "数据开发",
-        "storageResource": [
+        "serverInfos":[
           {
-            "servname": "Hive",
-            "url": "9"
+            "serverName":"大数据开发门户(基础版)",
+            "url":"https://bigdataportal.c.citic/ent/",
+            "image": "JCB"
           },
           {
-            "servname": "HDFS",
-            "count": "1",
-            "insid":"c879e866-2463-4500-9645-b393e4cae9ec"
+            "serverName":"大数据开发套件",
+            "url":"https://datacloud.c.citic/dacp/ftl/me/dataos/index",
+            "image": "KFTJ"
           }
-        ]
+        ],
+        "type":"数据开发"
+      },
+      {
+        "serverInfos":[
+          {
+            "serverName":"大数据开发门户(高级版)",
+            "url":"https://bigdataportal.c.citic/ent/",
+            "image": "GJB"
+          },
+          {
+            "serverName":"机器学习",
+            "url":"https://ml.c.citic/hub/login",
+            "image": "JQXX"
+          }
+        ],
+        "type":"数据应用"
       }
     ]
   }

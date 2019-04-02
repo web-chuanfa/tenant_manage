@@ -1,12 +1,12 @@
 {
-  "code":"0",
+  "errcode":"0",
   "msg":"success",
   "data": {
     "resultDatabaseEntity":
       [
         {
           "servId":"df12f3db-4ce7-4ec0-81f5-3f357e571883",
-          "servName":"HDFS_201833200733_53cc98dd-ba89-4090-9238-a628a12926d7",
+          "servName":"HDFS",
           "insId":"b4ca8d12-464b-4e77-93ee-f57e6baaba21",
           "purSize":1,
           "actUsedSize":"0.0000",

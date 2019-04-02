@@ -111,7 +111,7 @@
 
 <script>
 import Vue from 'vue'
-import App from '../../app'
+import App from '../../api'
 import cookie from 'js-cookie'
 export default {
   name: 'top',

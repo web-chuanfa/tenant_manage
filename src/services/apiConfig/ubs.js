@@ -13,7 +13,7 @@ const ubsConfig = {
   proxyUrl: '/ubs',
   paths: {
     menus: '/acl/getResources',
-    auth: '/auth',
+    auth: '/ubs/user/showPage?userid=20171130020249705-2584-32A2BCFEF',
     login: {
       logout: '/logout'
     },
@@ -24,10 +24,17 @@ const ubsConfig = {
     home: {
       overview: {
         geTall: '/ubs/user/getall', // 查找用户
+        getNews: '/ubs/notice/getNotices?pageNum=1&pageSize=10', // 概览新闻
+        getOrgsPrivs: '/ubs/user/getOrgAndGrp?userid=20171130020249705-2584-32A2BCFEF', // 所属组织
+        getInsInfo: '/ubs/v1/bigdata/service_instances/instanceCount?userid=20171130030142022-F235-2DE8F90C0', // 我的实例
+        getServiceInfo: '/ubs/v1/bigdata/service_instances/instanceOfType', // 我的服务
       },
       instanceManagement: {
         getServUsageInfo: '/ubs/usageInfo/getAllData', // 用量搜索联动
         getServerList: '/ubs/usage/resource', // 用量列表
+      },
+      auditLog: {
+        getLogList: '/ubs/server/auditAll?pagenum=1&pagesize=10'
       }
     }
   },
@@ -51,7 +58,7 @@ const ubsConfig = {
       instanceManagement: {
         getSerInfo: '/modules/home/instanceManagement/insinfo.json', // 实例信息列表
         getRenewalList: '/modules/home/instanceManagement/instance.json',// 续费列表
-        getServUsageInfo: '/modules/home/instanceManagement/usageInfo.json',
+        getServUsageInfo: '/modules/home/instanceManagement/usageInfo.json', //用量报告
       },
       user: {
         getListInfo: '/modules/home/user/listInfo.json', // 用户列表

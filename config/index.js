@@ -13,7 +13,8 @@ module.exports = {
     proxyTable: {
       '/ubs': {
         // target: 'http://10.247.33.82:8091',
-        target: 'http://10.76.53.113:8080',
+        // target: 'http://10.76.53.113:8080',
+        target: 'http://10.76.52.18:8081',
         changeOrigin: true,
         pathRewrite: {
           '^/ubs': ''

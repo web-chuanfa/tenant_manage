@@ -1,83 +1,56 @@
 {
-  "code": 0,
+  "errcode": 0,
   "error": null,
-  "data": {
-    "insinfo": [
-      {
-        "tit": "存储资源",
-        "storageResource": [
-          {
-            "servname": "Hive",
-            "count": "9",
-            "insid":"dd16c43f-740f-4079-8ef5-efdfcb57e350"
-          },
-          {
-            "servname": "HDFS",
-            "count": "1",
-            "insid":"c879e866-2463-4500-9645-b393e4cae9ec"
-          },
-          {
-            "servname": "Greenplum",
-            "count": "2",
-            "insid":"dd16c43f-740f-4079-8ef5-efdfcb57e350"
-          },
-          {
-            "servname": "HBase",
-            "count": "3",
-            "insid":"c879e866-2463-4500-9645-b393e4cae9ec"
-          }
-        ]
-      },
-      {
-        "tit": "计算资源",
-        "storageResource": [
-          {
-            "servname": "HBase",
-            "count": "1",
-            "insid":"dd16c43f-740f-4079-8ef5-efdfcb57e350"
-          },
-          {
-            "servname": "HDFS",
-            "count": "7",
-            "insid":"c879e866-2463-4500-9645-b393e4cae9ec"
-          },
-          {
-            "servname": "Greenplum",
-            "count": "2",
-            "insid":"dd16c43f-740f-4079-8ef5-efdfcb57e350"
-          },
-          {
-            "servname": "Hive",
-            "count": "5",
-            "insid":"c879e866-2463-4500-9645-b393e4cae9ec"
-          }
-        ]
-      },
-      {
-        "tit": "消息队列",
-        "storageResource": [
-          {
-            "servname": "Greenplum",
-            "count": "0",
-            "insid":"dd16c43f-740f-4079-8ef5-efdfcb57e350"
-          },
-          {
-            "servname": "HDFS",
-            "count": "4",
-            "insid":"c879e866-2463-4500-9645-b393e4cae9ec"
-          },
-          {
-            "servname": "Hive",
-            "count": "2",
-            "insid":"dd16c43f-740f-4079-8ef5-efdfcb57e350"
-          },
-          {
-            "servname": "HBase",
-            "count": "5",
-            "insid":"c879e866-2463-4500-9645-b393e4cae9ec"
-          }
-        ]
-      }
-    ]
-  }
+  "data": [
+    {
+      "insInfos":[
+        {
+          "image":"Hive",
+          "count":1,
+          "servName":"Hive"
+        },
+        {
+          "image":"Greenplum",
+          "count":0,
+          "servName":"Greenplum"
+        },
+        {
+          "image":"HDFS",
+          "count":0,
+          "servName":"HDFS"
+        },
+        {
+          "image":"HBase",
+          "count":0,
+          "servName":"HBase"
+        }
+      ],
+      "type":"存储资源"
+    },
+    {
+      "insInfos":[
+        {
+          "image":"Spark",
+          "count":0,
+          "servName":"Spark"
+        },
+        {
+          "image":"MapReduce",
+          "count":0,
+          "servName":"MapReduce"
+        }
+      ],
+      "type":"计算资源"
+    },
+    {
+      "insInfos":[
+        {
+          "image":"Kafka",
+          "count":0,
+          "servName":"Kafka"
+        }
+      ],
+      "type":"消息队列"
+    }
+  ]
 }

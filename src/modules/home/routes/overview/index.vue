@@ -10,14 +10,14 @@
                   <el-col :span="12">
                     <div class="card-panel-project">
                       <div class="card-panel-icon-wrapper">
-                        {{ orgsPrivs.length || 0 }}
+                        {{ orgTotal }}
                       </div>
                       <div class="card-panel-description">我的租户</div>
                     </div>
                   </el-col>
                   <el-col :span="12">
                     <div class="card-panel-project last">
-                      <div class="card-panel-icon-wrapper">{{ orgsPrivsCount }}</div>
+                      <div class="card-panel-icon-wrapper">{{ grpTotal }}</div>
                       <div class="card-panel-description">我的项目</div>
                     </div>
                   </el-col>
@@ -28,8 +28,8 @@
                   所属组织：
                 </div>
                 <ul>
-                  <li v-for='(item,index) in orgsPrivs'>
-                    <p v-for='(itemGrp,index) in item.grpsPrivs'>{{ itemGrp.org_name }}-{{ itemGrp.grp_name}}</p>
+                  <li v-for='(item,index) in orgAdnGrp'>
+                    <p v-for='(itemGrp,index) in item.grpList'>{{ itemGrp.orgName }}-{{ itemGrp.grpName}}</p>
                   </li>
                 </ul>
               </div>
@@ -75,13 +75,15 @@
             <div class="title">我的实例</div>
             <div class="content">
               <div class="item-instance" v-for="(item,index) in insinfo">
-                <div class="item-instance-title">{{ item.tit }}</div>
+                <div class="item-instance-title">{{ item.type }}</div>
                 <div class="item-instance-arrImgs">
-                  <div class="item-instance-img" v-for="(itemKey,index) in item.storageResource">
-                    <div class="item-key-show">
-                      <img :src="require('../../../../assets/images/serviceimg/'+itemKey.servname.toLowerCase()+'.png')" @click="insInfo(itemKey.insid)" alt="">
+                  <div class="item-instance-img" v-for="(itemKey,index) in item.insInfos">
+                    <div class="item-instance" @click="instanceInfo(itemKey.servName)" style="cursor: pointer;">
+                      <div class="item-key-show">
+                        <img :src="require('../../../../assets/images/serviceimg/'+itemKey.image.toLowerCase()+'.png')" alt="">
+                      </div>
+                      <div class="item-key-number">{{ itemKey.count }}</div>
                     </div>
-                    <div class="item-key-number">{{ itemKey.count }}</div>
                   </div>
                   <div style="clear: both"></div>
                 </div>
@@ -94,13 +96,15 @@
             <div class="title">我的服务</div>
             <div class="content">
               <div class="item-service" v-for="(item,index) in serviceinfo">
-                <div class="item-service-title">{{ item.tit }}</div>
+                <div class="item-service-title">{{ item.type }}</div>
                 <div class="item-service-arrImgs">
-                  <div class="item-service-img" v-for="(itemService,index) in item.storageResource">
+                  <div class="item-service-img" v-for="(itemService,index) in item.serverInfos">
                     <div class="item-key-show">
-                      <img :src="require('../../../../assets/images/serviceimg/'+itemService.servname.toLowerCase()+'.png')" @click="insInfo(itemService.insid)" alt="">
+                      <a :href="itemService.url" target="_blank">
+                        <img :src="require('../../../../assets/images/serviceimg/'+itemService.image+'.png')" alt="">
+                        <div class="item-key-number">{{ itemService.serverName }}</div>
+                      </a>
                     </div>
-                    <div class="item-key-number">{{ itemService.count }}</div>
                   </div>
                   <div style="clear: both"></div>
                 </div>
@@ -128,9 +132,9 @@ export default {
       animate: false,
       news: [],
       checkOne: [1, 2, 3],
-      userPrivsCount: 0,
-      orgsPrivsCount: 0,
-      orgsPrivs: [],
+      orgTotal: 0,
+      grpTotal: 0,
+      orgAdnGrp: [],
       nenew: '10',
       nenewTip: '实例7天后即将到期',
       match: '8',
@@ -159,23 +163,24 @@ export default {
     })
     // 所属组织
     this.$service.home.overview.getOrgsPrivs().then(res => {
-      this.orgsPrivs = res.orgsPrivs
+      // 租户，项目的列表
+      this.orgAdnGrp = res.orgAdnGrp;
+      // 租户、我的项目总数
+      this.orgTotal = res.orgTotal;
+      this.grpTotal = res.grpTotal;
     })
     // 我的实例
+    // let userid= '20171130030142022-F235-2DE8F90C0'
     this.$service.home.overview.getInsInfo().then(res => {
-      this.insinfo = res.insinfo
+      this.insinfo = res;
     })
     // 我的服务
     this.$service.home.overview.getServiceInfo().then(res => {
-      this.serviceinfo = res.serviceinfo
+      this.serviceinfo = res.serverTypeInfo;
     })
-    // 我的项目总数
-    for (let i = 0, item; item = this.orgsPrivs[i++];) {
-      this.orgsPrivsCount += parseInt(item.grpsPrivs.length)
-    }
   },
   methods: {
-    insInfo (name) {
+    instanceInfo (name) {
       console.log(name)
     },
     onMouseOver () {

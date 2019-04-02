@@ -28,23 +28,25 @@
       </el-form>
     </div>
     <div class="tenant-serve-list">
-      <el-row :gutter="20">
-        <el-col :span="2">
-          <img src="http://test.datacloud.c.citic/ubs/images/serviceimg/hive.png" alt="" height="50">
-        </el-col>
-        <el-col :span="16">
-          <div class="instance marginTop15">
-            <span>实例ID:</span>&nbsp;&nbsp;<span class="instance-data">46b4398e-86d5-4df2-a43d-bd16a313c431</span>
-          </div>
-        </el-col>
-        <el-col :span="6">
-          <div class="instance marginTop15 permissionOperation">
-            <span class="marginRight20" @click="accessDialog = true">查看权限</span>&nbsp;&nbsp;
-            <span class="marginRight20" @click="authorDialog = true">授权</span>&nbsp;&nbsp;
-            <span @click="cancelAuthorDialog = true">取消授权</span>
-          </div>
-        </el-col>
-      </el-row>
+      <div class="tenant-serve-item" v-for="(item,index) in serverList">
+        <el-row :gutter="20">
+          <el-col :span="2">
+            <img :src="require('../../../../assets/images/serviceimg/'+item.servName.toLowerCase()+'.png')" alt="" height="50">
+          </el-col>
+          <el-col :span="16">
+            <div class="instance marginTop15">
+              <span>实例ID:</span>&nbsp;&nbsp;<span class="instance-data">{{ item.insId }}</span>
+            </div>
+          </el-col>
+          <el-col :span="6">
+            <div class="instance marginTop15 permissionOperation">
+              <span class="marginRight20" @click="accessDialog = true">查看权限</span>&nbsp;&nbsp;
+              <span class="marginRight20" @click="authorDialog = true">授权</span>&nbsp;&nbsp;
+              <span @click="cancelAuthorDialog = true">取消授权</span>
+            </div>
+          </el-col>
+        </el-row>
+      </div>
     </div>
     <el-dialog title="已授权用户" :visible.sync="accessDialog" width="40%">
       <el-table :data="gridData">
@@ -142,13 +144,13 @@
       <el-pagination
         @size-change="handleSizeChange"
         @current-change="handleCurrentChange"
-        :current-page="currentPage4"
-        :page-sizes="[100, 200, 300, 400]"
-        :page-size="100"
+        :current-page="currentPage"
+        :page-sizes="[10, 20, 30, 40]"
+        :page-size="10"
         background
         align="right"
         layout="total, sizes, prev, pager, next, jumper"
-        :total="400">
+        :total="40">
       </el-pagination>
     </div>
   </div>
@@ -184,7 +186,7 @@
         active1: '',
         active2: 'none',
         tableData: [],
-        userAuthor: [],
+        serverList: [],
         YX: [
           {
             text: '计信院',
@@ -406,10 +408,7 @@
         selection: [],
         project: [],
         instance: [],
-        currentPage1: 5,
-        currentPage2: 5,
-        currentPage3: 5,
-        currentPage4: 4,
+        currentPage: 1,
         gridData: [
           {
             date: '2016-05-02',
@@ -492,9 +491,9 @@
     },
     mounted() {
       // 用户授权
-      this.$service.home.user.getUserAuthor().then(res => {
-        this.userAuthor = JSON.parse(JSON.stringify(res.userAuthor));
-      });
+      this.$service.home.instanceManagement.getServUsageInfo().then(res => {
+        this.serverList = res.resultDatabaseEntity;
+      })
     }
   }
 </script>

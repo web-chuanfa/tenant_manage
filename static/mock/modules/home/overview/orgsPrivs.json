@@ -1,68 +1,98 @@
 {
-  "code": 0,
+  "errcode": 0,
   "error": null,
   "data": {
-    "orgsPrivs": [
+    "orgTotal":8,
+    "grpTotal":32,
+    "orgAdnGrp": [
       {
-        "org_name": "租户1",
-        "org_id": "6e15f686-231a-4144-8c3d-22dc5fba90ef",
-        "grp_name": "chensl-测试基线",
-        "grp_id": "8bc621e6-7f70-445e-b9d8-40fd8a805eaf",
-        "desc": "Synchronized from CITIC Cloud",
-        "grpsPrivs":[
+        "orgName":"中信云测试租户3",
+        "grpList":[
           {
-            "org_name": "租户1",
-            "grp_name": "chensl-测试基线",
-            "grp_id": "8bc621e6-7f70-445e-b9d8-40fd8a805eaf",
-            "desc": "Synchronized from CITIC Cloud"
+            "orgName":"中信云测试租户3",
+            "grpName":"测试租户444444"
           },
           {
-            "org_name": "租户1",
-            "grp_name": "测试租户应用基线3",
-            "grp_id": "8bc621e6-7f70-445e-b9d8-40fd8a805eaf",
-            "desc": "Synchronized from CITIC Cloud"
+            "orgName":"中信云测试租户3",
+            "grpName":"chensl-测试基线"
           },
           {
-            "org_name": "租户1",
-            "grp_name": "测试租户222",
-            "grp_id": "8bc621e6-7f70-445e-b9d8-40fd8a805eaf",
-            "desc": "Synchronized from CITIC Cloud"
+            "orgName":"中信云测试租户3",
+            "grpName":"测试租户应用基线3"
           }
         ]
       },
       {
-        "org_name": "租户2",
-        "org_id": "f33f2172-8a33-4013-bf3d-cf74245e2e05",
-        "grpsPrivs":[
+        "orgName":"中国科技有限公司",
+        "grpList":[
           {
-            "org_name": "租户2",
-            "grp_name": "物联网分析",
-            "grp_id": "8bc621e6-7f70-445e-b9d8-40fd8a805eaf",
-            "desc": "Synchronized from CITIC Cloud"
-          },
-          {
-            "org_name": "租户2",
-            "grp_name": "数据仓库项目",
-            "grp_id": "8bc621e6-7f70-445e-b9d8-40fd8a805eaf",
-            "desc": "Synchronized from CITIC Cloud"
+            "orgName":"中国科技有限公司",
+            "grpName":"新租户新项目验证"
           }
         ]
       },
       {
-        "org_name": "大数据应用",
-        "org_id": "723b7193-afd5-44af-813a-775461d123ab",
-        "grpsPrivs":[
+        "orgName":"中信云测试大数据应用",
+        "grpList":[
           {
-            "org_name": "大数据应用",
-            "grp_name": "ODS系统",
-            "grp_id": "8bc621e6-7f70-445e-b9d8-40fd8a805eaf",
-            "desc": "Synchronized from CITIC Cloud"
+            "orgName":"中信云测试大数据应用",
+            "grpName":"开发门户接口测试"
           },
           {
-            "org_name": "大数据应用",
-            "grp_name": "客户价值挖掘",
-            "grp_id": "8bc621e6-7f70-445e-b9d8-40fd8a805eaf",
-            "desc": "Synchronized from CITIC Cloud"
+            "orgName":"中信云测试大数据应用",
+            "grpName":"中信重工ODS"
+          },
+          {
+            "orgName":"中信云测试大数据应用",
+            "grpName":"数据报送"
+          },
+          {
+            "orgName":"中信云测试大数据应用",
+            "grpName":"网关测试环境"
+          },
+          {
+            "orgName":"中信云测试大数据应用",
+            "grpName":"zhaonina_20181011"
+          },
+          {
+            "orgName":"中信云测试大数据应用",
+            "grpName":"开发门户测试1"
+          },
+          {
+            "orgName":"中信云测试大数据应用",
+            "grpName":"开发门户测试2"
+          },
+          {
+            "orgName":"中信云测试大数据应用",
+            "grpName":"开发门户同步测试"
+          },
+          {
+            "orgName":"中信云测试大数据应用",
+            "grpName":"开发门户增量同步"
+          },
+          {
+            "orgName":"中信云测试大数据应用",
+            "grpName":"同步测试20181221"
+          },
+          {
+            "orgName":"中信云测试大数据应用",
+            "grpName":"同步测试20190114"
+          },
+          {
+            "orgName":"中信云测试大数据应用",
+            "grpName":"同步测试20190115"
+          },
+          {
+            "orgName":"中信云测试大数据应用",
+            "grpName":"同步测试_20190115_16"
+          },
+          {
+            "orgName":"中信云测试大数据应用",
+            "grpName":"中信云测试租户4"
+          },
+          {
+            "orgName":"中信云测试大数据应用",
+            "grpName":"大数据HDP集群升级测试"
           }
         ]
       }

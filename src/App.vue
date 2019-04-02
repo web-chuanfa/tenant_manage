@@ -21,7 +21,7 @@ export default {
   components: {
     layout
   },
-  watch:{
+  watch: {
   	$route () {
   		document.title = this.$route.meta.title || this.$route.meta.pathName
   	}

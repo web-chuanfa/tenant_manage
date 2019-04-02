@@ -29,7 +29,7 @@ axios.interceptors.request.use(function (config) {
 axios.interceptors.response.use(function (response) {
   Vue.prototype.$store.commit('hideLoading')
   // 接口参数，权限问题，统一提示，然后错误（业务模块选择性处理）
-  if (response.data.code === 1) {
+  if (response.data.errcode === 1) {
     Vue.prototype.$message.error(response.data.error.message)
     return Promise.reject(response.data.error)
   }
